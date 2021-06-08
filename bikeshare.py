@@ -195,7 +195,7 @@ def record_check(df):
                 else:
                     break
         except:
-            print('You\'ve seen enough, time to go outside!')
+            print("That's all folks!")
     else:
         return
 
