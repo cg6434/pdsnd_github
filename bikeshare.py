@@ -2,10 +2,12 @@ import time
 import pandas as pd
 import numpy as np
 
+# CITY DATA FILES
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
               'Washington': 'washington.csv' }
 
+# CAPTURES USER PREFERNECES
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -55,7 +57,7 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
-
+# LOADS CITY DATA AND APPROPRIATE TIME FRAMES
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -83,7 +85,7 @@ def load_data(city, month, day):
 
     return df
 
-
+# CALCS TIME STATISTICS
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -111,7 +113,7 @@ def time_stats(df):
     print("Note: This took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# CALCS STATION INFORMATION
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -134,7 +136,7 @@ def station_stats(df):
     print("Note: This took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# CALCS TRIP DURATIONS
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -154,7 +156,7 @@ def trip_duration_stats(df):
     print("Note: This took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# DISPLAYS USER INFORMATION
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
@@ -182,6 +184,7 @@ def user_stats(df):
     print("Note: This took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+# DISPLAYS RECORD LEVEL INFORMATION TO REVIEW
 def record_check(df):
     record_inquiry = input('Would you like see individual records?  Please type \'Yes\' to view: ')
     if record_inquiry.title() == 'Yes':
@@ -199,7 +202,7 @@ def record_check(df):
     else:
         return
 
-
+# MAIN PROGRAM
 def main():
     while True:
         city, month, day = get_filters()
