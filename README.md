@@ -14,3 +14,4 @@ bikeshare.py, chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
 Reference to forked repository and others that contributed.
+Also, thank you to my mom and my family!
