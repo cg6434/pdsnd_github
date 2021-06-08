@@ -183,7 +183,7 @@ def user_stats(df):
     print('-'*40)
 
 def record_check(df):
-    record_inquiry = input('Would you like see individual level records?  Please type \'Yes\' to view: ')
+    record_inquiry = input('Would you like see individual records?  Please type \'Yes\' to view: ')
     if record_inquiry.title() == 'Yes':
         try:
             print(df.size)
@@ -209,7 +209,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         record_check(df)
-        restart = input('\nWould you like to restart? Enter yes or no: ')
+        restart = input('\nWould you like to run again? Enter yes or no: ')
         if restart.lower() != 'yes':
             break
 
